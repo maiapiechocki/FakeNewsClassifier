@@ -7,11 +7,11 @@ This model uses TL to build upon the pretrained model BERT to classify news arti
 
 1. Dataset & Preprocessing: 
 
-Preprocessing included tokenizing the text using BERT’s tokenizer, padding/truncating sequences to a fixed length, and using an attention mask to handle padding. These steps ensure the model can process varying text lengths and focus only on meaningful tokens.
+Preprocessing included tokenizing the text using BERT’s tokenizer, padding/truncating sequences to a fixed length, and using an attention mask to handle padding. Since BERT requires inputs to be in a fixed-size and shape, truncation and padding of input is applied, setting the input to a fixed length of 18. 18 was divulged since most news titles are within 18 words long. These steps ensure the model can process varying text lengths and focus only on meaningful tokens.
 
 2. Model Development and Trianing:
 
-I implemented a custom BERT architecture, using BERT as the core model due to its strong pre-trained language understanding. I made modifications by freezing the layers of the BERT model, allowing the model to retain the pre-trained knowledge. After extracting the [CLS] token's representation from BERT, I passed it through a custom fully connected layer (512 neurons), followed by a ReLU activation to introduce non-linearity and a dropout layer for regularization to prevent overfitting. This output was then passed through a second fully connected layer to produce the class scores.
+I implemented a custom BERT architecture, using BERT as the core model due to its strong pre-trained language understanding. +First, I froze the layers of the BERT model, allowing the model to retain the pre-trained knowledge. After extracting the [CLS] token's representation from BERT, I passed it through a custom fully connected layer (512 neurons), followed by a ReLU activation to introduce non-linearity and a dropout layer for regularization to prevent overfitting. This output was then passed through a second fully connected layer to produce the class scores.
 The model was trained using the AdamW optimizer and CrossEntropyLoss for binary classification. The learning rate was set to 1e-5, and the batch size was set to 32. The model was trained for 1 epoch. These choices were made after fine-tuning the model's parameters, aiming to maximize training and validation accuracy while accounting for the relatively small dataset size.
 
 3. Model Evaluation/Results:

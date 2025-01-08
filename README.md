@@ -27,4 +27,3 @@ Key libraries:
 - **Hugging Face Transformers**: Used to load the pretrained BERT model.
 - **scikit-learn**: For data preprocessing and model evaluation.
   
-## :shipit:

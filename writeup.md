@@ -24,9 +24,9 @@ The dataset, model architecture, and training procedures fit well for the task o
 This work can contribute to social good by automating fake news detection and aiding in the fight against misinformation. However, the model’s generalization capability might be limited by the dataset size and the binary nature of the classification. 
 
 References that helped me understand BERT structure include:
-1. BERT tutorial implementation: 
+  1. BERT tutorial implementation: 
 https://www.kaggle.com/code/harshjain123/bert-for-everyone-tutorial-implementation  
-2. BERT architecture: https://stackoverflow.com/questions/77164276/bert-arch-has-no-attribute-predict-error-while-loading-pretrained-model-in-gradi 
+  2. BERT architecture: https://stackoverflow.com/questions/77164276/bert-arch-has-no-attribute-predict-error-while-loading-pretrained-model-in-gradi 
 
 5. Next Steps:
 To improve the model, I would expand the dataset to include more diverse sources of news, ensuring that it generalizes well to a broader range of content. Additionally, I would implement functionality to save the best model weights during training to avoid losing the best-performing version. Since running the model on a CPU was very time-consuming, I would optimize the training and evaluation process by utilizing parallel computing through data loaders and workers, ensuring faster computation when GPU usage is not available(ran into colab GPU limits). Further, adding a multi-class classification model that could classify news as fake, real, or other categories would enhance its utility. Last, incorporating more advanced techniques like adversarial training could also strengthen the model's robustness and help it handle more challenging, real-world data.

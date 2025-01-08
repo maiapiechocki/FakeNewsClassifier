@@ -14,8 +14,8 @@ This model uses BERT to classify news articles into either fake or real news. TL
 4. After downloading the dataset, extract it and load it into your Python environment.
 5. Ensure you're running on a GPU for faster training. If you're using Google Colab, make sure to select GPU from the runtime settings.
 6. Train and Evaluate model. Model achieves 99% accuracy. Further metrics below:
-              precision    recall  f1-score   support
-
+               precision    recall  f1-score   support
+           
            0       1.00      0.99      0.99     23481
            1       0.98      1.00      0.99     21417
 

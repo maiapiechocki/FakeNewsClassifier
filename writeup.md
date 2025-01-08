@@ -3,7 +3,7 @@ piechock@usc.edu
 
 Introduction: 
 
-This model uses BERT to classify news articles into either fake or real news. TL is used to build this fake-news detection model upon the pre-trained model BERT. 
+This model uses TL to build upon the pretrained model BERT to classify news articles into either fake or real news.
 
 1. Dataset & Preprocessing: 
 

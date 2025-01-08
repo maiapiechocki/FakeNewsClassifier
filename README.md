@@ -1,8 +1,5 @@
 # Fake News Detection with BERT :newspaper:
 
-## Created By: Maia Piechocki
-
-## How to Compile/Execute :computer:
 
 1. First, download all the files from the repository.
 2. Install the **Kaggle API** by running the following command:

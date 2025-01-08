@@ -3,7 +3,7 @@
 This model uses BERT to classify news articles into either fake or real news. TL is used to build this fake-news detection model upon the pre-trained model BERT. 
 
 1. First, download all the files from the repository.
-2. Install the **Kaggle API** by running the following command:
+2. Ensure that you install the **Kaggle API** by running the following command:
    ```bash
    !pip install kaggle
    ```
@@ -11,9 +11,9 @@ This model uses BERT to classify news articles into either fake or real news. TL
    ```bash
    !kaggle datasets download -d emineyetm/fake-news-detection-datasets
    ```
-4. After downloading the dataset, extract it and load it into your Python environment.
+4. After downloading the dataset, you should be able to extract it and load it into your Python environment.
 5. Ensure you're running on a GPU for faster training. If you're using Google Colab, make sure to select GPU from the runtime settings.
-6. Train and Evaluate model. Model achieves 99% accuracy. Further metrics below: \n
+6. Train and Evaluate model within the given code. Model achieves 99% accuracy. Further metrics below: \n
                precision    recall  f1-score   support
            
            0       1.00      0.99      0.99     23481

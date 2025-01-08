@@ -12,7 +12,7 @@ This model uses BERT to classify news articles into either fake or real news. TL
    !kaggle datasets download -d emineyetm/fake-news-detection-datasets
    ```
 4. After downloading the dataset, you should be able to extract it and load it into your Python environment.
-5. Ensure you're running on a GPU for faster training. If you're using Google Colab, make sure to select GPU from the runtime settings.
+5. If available, run on a GPU for faster training. If you're using Google Colab, make sure to select GPU from the runtime settings.
 6. Train and Evaluate model within the given code. Model achieves 99% accuracy. Further metrics below: \n
                precision    recall  f1-score   support
            

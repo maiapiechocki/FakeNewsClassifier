@@ -1,6 +1,6 @@
 # Fake News Detection with BERT :newspaper:
 
-This model uses BERT to classify news articles into either fake or real news. 
+This model uses TL to build upon the pretrained model BERT to classify news articles into either fake or real news. 
 
 1. First, download all the files from the repository.
 2. Ensure that you install the **Kaggle API** by running the following command:

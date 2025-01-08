@@ -24,6 +24,6 @@ This project was developed using **PyTorch** for deep learning, with the **Huggi
 
 Key libraries:
 - **PyTorch**: Deep learning framework.
-- **Hugging Face Transformers**: Used to load the pretrained BERT model.
+- **Hugging Face Transformers**: Used to load the pretrained BERT model and prepare the dataset for training.
 - **scikit-learn**: For data preprocessing and model evaluation.
   

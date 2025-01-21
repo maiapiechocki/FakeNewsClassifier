@@ -7,7 +7,7 @@ This model uses TL to build upon the pretrained model BERT to classify news arti
 
 1. Dataset & Preprocessing: 
 
-Preprocessing included tokenizing the text using BERT’s tokenizer, padding/truncating sequences to a fixed length, and using an attention mask to handle padding. Since BERT requires inputs to be in a fixed-size and shape, truncation and padding of input is applied, setting the input to a fixed length of 18. 18 was divulged since most news titles are within 18 words long. These steps ensure the model can process varying text lengths and focus only on meaningful tokens.
+Preprocessing included tokenizing the text using BERT’s tokenizer, padding/truncating sequences to a fixed length, and using an attention mask to handle padding. Since BERT requires inputs to be in a fixed-size and shape, I set the input to a fixed length of 18. 18 was divulged since most news titles are within 18 words long. These steps ensure the model can process varying text lengths and focus only on meaningful tokens.
 
 2. Model Development and Trianing:
 
@@ -19,7 +19,7 @@ The model was trained using the AdamW optimizer and CrossEntropyLoss for binary 
 
 3. Model Evaluation/Results:
 
-Model evaluation was done using accuracy, loss recall, and f1score. Through thorough tuning of the model and hyperparameters, the mdoel achieves a validation accuracy of 99 %. To my best knowledge, this is the highest single-network accuracy achieved on this dataset without using any extra training data. The validation loss is also optimal at 0.027. Recall was .99 for fake news and 1.0 for real news. f1-score for fake news was .99 for both fake and real news.
+Model evaluation was done using accuracy, loss recall, and f1score. Through thorough tuning of the model and hyperparameters, the mdoel achieves a validation accuracy of 99 %. To my best knowledge, this is the highest single-network accuracy achieved on this dataset without using any extra training data. The validation loss is also optimal at 0.027. Recall was .99 for fake news and 1.0 for real news. f1-score was .99 for both fake and real news.
 
 4. Discussion:
 The dataset, model architecture, and training procedures fit well for the task of fake news detection. BERT provides strong pre-trained language understanding, coupled with custom layers trained to the dataset, producing a very accurate model.

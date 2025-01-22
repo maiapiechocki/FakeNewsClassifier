@@ -3,7 +3,7 @@ piechock@usc.edu
 
 Introduction: 
 
-This model uses TL to build upon the pretrained model BERT to classify news articles into either fake or real news.
+This model uses TL to build upon the pretrained model BERT to classify news articles into either fake or real news, achieving an accuracy of 99%.
 
 1. Dataset & Preprocessing: 
 

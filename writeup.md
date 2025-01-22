@@ -11,7 +11,7 @@ Preprocessing included tokenizing the text using BERT’s tokenizer, padding/tru
 
 2. Model Development and Trianing:
 
-I implemented a custom BERT architecture, using BERT as the core model due to its strong pre-trained language understanding. +First, I froze the layers of the BERT model, allowing the model to retain the pre-trained knowledge. After extracting the [CLS] token's representation from BERT, I passed it through a custom fully connected layer (512 neurons), followed by a ReLU activation to introduce non-linearity and a dropout layer for regularization to prevent overfitting. This output was then passed through a second fully connected layer to produce the class scores. 
+I implemented a custom BERT architecture, using BERT as the core model due to its strong pre-trained language understanding. First, I froze the layers of the BERT model, allowing the model to retain the pre-trained knowledge. After extracting the [CLS] token's representation from BERT, I passed it through a custom fully connected layer (512 neurons), followed by a ReLU activation to introduce non-linearity and a dropout layer for regularization to prevent overfitting. This output was then passed through a second fully connected layer to produce the class scores. 
 
 To speed up training and reduce memory usage, the model incorporates automatic mixed precision(AMP) using autocast and GradScaler. Autocast() is used during the forward pass(when predictions are caluclated) to automatically use half precision(FP16) operations and GradScaler is used to scale the loss during backpropagation, which prevents underflow of gradients when using mixed precision. 
 
@@ -19,7 +19,7 @@ The model was trained using the AdamW optimizer and CrossEntropyLoss for binary 
 
 3. Model Evaluation/Results:
 
-Model evaluation was done using accuracy, loss recall, and f1score. Through thorough tuning of the model and hyperparameters, the mdoel achieves a validation accuracy of 99 %. To my best knowledge, this is the highest single-network accuracy achieved on this dataset without using any extra training data. The validation loss is also optimal at 0.027. Recall was .99 for fake news and 1.0 for real news. f1-score was .99 for both fake and real news.
+Model evaluation was done using accuracy, loss recall, and f1score. Through thorough tuning of the model and hyperparameters, the mdoel achieves a validation accuracy of 99 %. The validation loss is also optimal at 0.027. Recall was .99 for fake news and 1.0 for real news. f1-score was .99 for both fake and real news.
 
 4. Discussion:
 The dataset, model architecture, and training procedures fit well for the task of fake news detection. BERT provides strong pre-trained language understanding, coupled with custom layers trained to the dataset, producing a very accurate model.
